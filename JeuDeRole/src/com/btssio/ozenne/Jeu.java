@@ -127,14 +127,14 @@ public class Jeu {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		Arme premierearme = new Arme("SUU");
-		Personnage premierperso = new Personnage("SUSA",premierearme);
+		//Arme premierearme = new Arme("SUU");
+		//Personnage premierperso = new Personnage("SUSA",premierearme);
 		
 		
-		Arme deuxiemearme= new Arme("EXCAAAA");
-		Personnage deuxiemeperso = new Personnage("SUSO", deuxiemearme);
+		//Arme deuxiemearme= new Arme("EXCAAAA");
+		//deuxiemeperso = new Personnage("SUSO", deuxiemearme);
 			
-		premierperso.getNom();
+		//premierperso.getNom();
 		int i;
 		
 		for (i = 0; i < 5; i++) {
@@ -145,7 +145,12 @@ public class Jeu {
 		
 		System.out.println("C'est la fin !");
 		}
-
+	
+	Effet renforcement =new Effet("renforce l'arme de 10 poitn de dégat",10,'+');
+	Arme epeeCourte = new Arme("épéeCourte",150);
+	ArmeSpecifique epeeRenforce=new ArmeSpecifique("épéeRenforcé",300,renforcement);
+	
+	System.out.println()
 	}
 	
 	

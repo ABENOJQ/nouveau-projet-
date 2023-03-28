@@ -6,7 +6,14 @@ public class Personnage {
 	private int pointsDeVie;
 	private int positionX, positionY;
 	private Arme arme;
+	private static int nbpointsDeVieBase = 100;
 	
+	public static int getNbpointsDeVieBase() {
+		return Personnage.nbpointsDeVieBase;
+	}
+	public static void setNbpointsDeVieBase(int pointdevie) {
+		Personnage.nbpointsDeVieBase =pointdevie;
+		}
 	public String getNom() {
 		return nom;
 	}
@@ -40,7 +47,8 @@ public class Personnage {
 		//valeur par defaut
 		this.positionX =0;
 		this.positionY =0;
-		this.pointsDeVie =100;
+		this.pointsDeVie = Personnage.nbpointsDeVieBase;
+		
 		//argument
 		this.nom=p_nom;
 		this.arme=p_arme;
@@ -60,13 +68,13 @@ public class Personnage {
 		}
 	}
 	
-	public void recevoirDesDegats(int nombre ) {
-		this.pointsDeVie-=-nombre*10;
+	public void recevoirDesDegats(int nombre  , int multiplicateur) {
+		this.pointsDeVie-= nombre*multiplicateur;
 		System.out.println("je viens de recevoir des degats");
 	}
 	public void attaquerUnAdversaire(Personnage victime,int des) {
-		
-		victime.recevoirDesDegats(des);
+		int degatdebase=Arme.getDegatsDeBase();
+		victime.recevoirDesDegats(des,degatdebase);
 		System.out.println(this.nom +"a attaqué "+victime.getNom());
 	}
 	
@@ -79,13 +87,13 @@ public class Personnage {
 	
 public static void main(String[] args) {
 	
-	System.out.println("Bonjour");
+	//System.out.println("Bonjour");
 	//instanciation de l'arme
-	Arme weapon001 = new Arme("ca");
+	//Arme weapon001 = new Arme("ca");
 	//instanciation du personnage
-	Personnage user001 = new Personnage("Sultana", weapon001);
+	//Personnage user001 = new Personnage("Sultana", weapon001);
 	// personnage se présente
-	user001.sePresenter();
+	//user001.sePresenter();
 	
 	//System.out.println("nom de base : "+user001.getNom());
 	
@@ -105,9 +113,12 @@ public static void main(String[] args) {
 	
 	//System.out.println("Nouveau nom: "+user001.getArme().getNom());
 	
+	System.out.println("Bonjour");
+	Parametres parametres=new Parametres();
+	parametres.initParametres(200, 5);
 	
-	
-	
+	//Personnage toitoine = new Personnage("toitoine", weapon001);
+	//System.out.println(toitoine.getPointsDeVie());
 }
 
 

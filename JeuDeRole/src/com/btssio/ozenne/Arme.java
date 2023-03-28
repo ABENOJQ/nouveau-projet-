@@ -1,10 +1,20 @@
 package com.btssio.ozenne;
 
 public class Arme {
-
 	private String nom;
-	private int degats;
-
+	public final static int degats=10;
+	private int Prix;
+	
+	
+	public int getPrix() {
+		return Prix;
+	}
+	public static int getDegatsDeBase() {
+		return Arme.degats;
+	}
+	//public static void setDegatsDeBase(int degats) {
+		//Arme.degats =degats;
+		//}
 
 
 
@@ -30,35 +40,11 @@ public class Arme {
 
 
 
-
-
-
-	public int getDegats() {
-		return degats;
-	}
-
-
-
-
-
-
-
-
-	public void setDegats(int degats) {
-		this.degats = degats;
-	}
-
-
-
-
-
-
-
-
-	public Arme(String nom) {
+	public Arme(String nom,int p_prix) {
 		super();
 		this.nom = nom;
-		this.degats = 10;
+		this.Prix=p_prix;
+		
 	}
 
 
