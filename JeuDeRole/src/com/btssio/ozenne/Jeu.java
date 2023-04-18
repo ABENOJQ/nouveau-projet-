@@ -150,7 +150,7 @@ public class Jeu {
 	Arme epeeCourte = new Arme("épéeCourte",150);
 	ArmeSpecifique epeeRenforce=new ArmeSpecifique("épéeRenforcé",300,renforcement);
 	
-	System.out.println()
+	
 	}
 	
 	

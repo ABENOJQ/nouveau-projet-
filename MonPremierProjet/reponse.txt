@@ -1,0 +1,13 @@
+1. zoo.presenter(felix);
+
+2. variable en privée
+on ne peut pas car elle a deja été donner au préalable
+
+3. le nombre d'animaux est changé en fonction ddu nombre d'element dans la liste
+List<Animal> lesAnimaux = new ArrayList<Animal>();
+
+4. 9cm / 10cm / il y a un compteur qui a augmenter la  valeur de la taille
+
+5.non / saucisse.setTaille(40); / rien
+
+6.

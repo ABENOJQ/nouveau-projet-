@@ -5,8 +5,9 @@ public class Personnage {
 	private String nom;
 	private int pointsDeVie;
 	private int positionX, positionY;
-	private Arme arme;
+	private Armure sonArmure;
 	private static int nbpointsDeVieBase = 100;
+	
 	
 	public static int getNbpointsDeVieBase() {
 		return Personnage.nbpointsDeVieBase;
@@ -22,13 +23,13 @@ public class Personnage {
 		this.nom = nom;
 	}
 
-	public Arme getArme() {
-		return arme;
-	}
+	//public Arme getArme() {
+		//return arme;
+	//}
 
-	public void setArme(Arme arme) {
-		this.arme = arme;
-	}
+	//public void setArme(Arme arme) {
+		//this.arme = arme;
+	//}
 
 	public int getPointsDeVie() {
 		return pointsDeVie;
@@ -43,7 +44,7 @@ public class Personnage {
 	 * @param p_nom nom du personnage
 	 * @param p_arme arme du personnage
 	 */
-	public Personnage(String p_nom, Arme p_arme) {
+	public Personnage(String p_nom, Armure p_armure) {
 		//valeur par defaut
 		this.positionX =0;
 		this.positionY =0;
@@ -51,7 +52,7 @@ public class Personnage {
 		
 		//argument
 		this.nom=p_nom;
-		this.arme=p_arme;
+		this.sonArmure=p_armure;
 	}
 	
 	
@@ -82,7 +83,7 @@ public class Personnage {
 		
 	}
 	public void sePresenter() {
-		System.out.println("Bonjour, "+ this.nom+"et mon arme"+this.arme.getNom());
+		System.out.println("Bonjour, "+ this.nom+"et mon armure"+this.sonArmure.getNom());
 	}
 	
 public static void main(String[] args) {
